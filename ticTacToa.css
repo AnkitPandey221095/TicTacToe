@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Gilroy';
+
+}
+html,body{
+    width:100%;
+    height:100%;
+    background-image: linear-gradient(180deg, teal , black);
+}
+
+nav{
+    background-color: rgba(79, 75, 75, 0.4);
+    backdrop-filter: blur(50px);
+    color: white;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/);
+    padding: 0.5%;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    position: relative;
+}
+
+.main_box{
+    display: grid;
+    grid-template-rows:repeat(3,8vw) ;
+    grid-template-columns: repeat(3,8vw);
+    margin: 2%;
+}
+.block{
+    border: solid black 1px;
+    font-size: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block:hover{
+    background-color:rgb(2, 102, 102);
+    
+}
+
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.heading{
+    font-size: 30px;
+    font-weight: 30px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color:white;
+}
+.gameStatus #reset{
+    border: black 2px solid;
+    background-color: rgb(243, 103, 103);
+    font-size: 20px;
+    padding: 2px 5px;
+    border-radius: 20px;
+    margin: 5px;
+    text-transform: uppercase;
+
+}
+
+
+.gameStatus #mute{
+    border: black 2px solid;
+    background-color: rgb(252, 182, 61);
+    font-size: 20px;
+    padding: 2px 5px;
+    border-radius: 20px;
+    margin: 5px;
+    text-transform: uppercase;
+
+}
+
+.gameStatus #reset:hover{
+    background-color: rgb(232, 57, 57);
+}
+
+.gameStatus #mute:hover{
+    background-color:  rgb(165, 120, 41);
+}
+
+
+.winStatus span{
+    font-size: 40px;
+}
+
+.winStatus img{
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+
+
+
+@media screen and (max-width: 950px){
+    body{
+        flex-wrap:wrap;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .gameStatus{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .winStatus{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media screen and (max-width: 600px){
+    .heading{
+        font-size: 20px;
+    }
+    .winStatus span{
+        font-size: 20px;
+    }
+    .gameStatus #reset{
+       font-size: 15px;
+    }
+
+
+}
+@media screen and (max-width: 400px){
+    .heading{
+        font-size: 10px;
+    }
+    .winStatus span{
+        font-size: 10px;
+    }
+
+
+}
+
