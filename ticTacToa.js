@@ -103,6 +103,7 @@ resetbtn.addEventListener('click',()=>{
     turn="X"
     statusText.innerHTML=`It's ${turn} turn`
     gameOver=false
+    mutebtn.innerText="mute"
 
 })
 
