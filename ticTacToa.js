@@ -17,19 +17,16 @@ function changemute(){
     return mute===false?true:false;
     
 }
-function changetext(){
-    if(mute==false){
-        mutebtn.innerText="mute"
-    }
-    else{
-        mutebtn.innerText="unmute"
-    }
-    return mutebtn.innerText
-}
+
 
 mutebtn.addEventListener('click',()=>{
     mute=changemute()
-    mutebtn.innerText=changetext()
+    if(mutebtn.innerText==="mute"){
+        mutebtn.innerText="unmute"
+    }
+    else{
+        mutebtn.innerText="mute"
+    }
 })
 
 resetbtn.addEventListener("click",()=>{
