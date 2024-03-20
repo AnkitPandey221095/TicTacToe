@@ -14,7 +14,7 @@ let winning_dance=document.querySelector("#winning_dance")
 
 
 function changemute(){
-    mute===false?true:false;
+    return mute===false?true:false;
     
 }
 function changetext(){
