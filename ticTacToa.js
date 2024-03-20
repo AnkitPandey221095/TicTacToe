@@ -17,10 +17,19 @@ function changemute(){
     mute===false?true:false;
     
 }
+function changetext(){
+    if(mute==false){
+        mutebtn.innerText="mute"
+    }
+    else{
+        mutebtn.innerText="unmute"
+    }
+    return mutebtn.innerText
+}
 
 mutebtn.addEventListener('click',()=>{
     mute=changemute()
-    mutebtn.innerText="unmute"
+    mutebtn.innerText=changetext()
 })
 
 resetbtn.addEventListener("click",()=>{
@@ -103,7 +112,6 @@ resetbtn.addEventListener('click',()=>{
     turn="X"
     statusText.innerHTML=`It's ${turn} turn`
     gameOver=false
-    mutebtn.innerText="mute"
 
 })
 
